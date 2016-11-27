@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="20dp"
+    android:layout_marginRight="20dp"
+    android:background="#ffd5ffeb">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/scrollView3"
+        android:layout_gravity="center_horizontal">
+
+        <TableLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+
+                <TextView
+                    android:id="@+id/countrylabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/countrylabel"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+
+                    android:layout_column="0" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+
+                <TextView
+                    android:id="@+id/country"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/Base.TextAppearance.Widget.AppCompat.Toolbar.Title"
+                    android:layout_alignTop="@+id/countrylabel"
+                    android:layout_toRightOf="@+id/countrylabel"
+                    android:layout_toEndOf="@+id/countrylabel"
+                    android:layout_column="0" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+
+                <TextView
+                    android:id="@+id/ranklabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/ranklabel"
+                    android:layout_below="@+id/country"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+
+                <TextView
+                    android:id="@+id/rank"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/ranklabel"
+                    android:layout_alignBottom="@+id/ranklabel"
+                    android:layout_toRightOf="@+id/ranklabel"
+                    android:layout_toEndOf="@+id/ranklabel"
+                    style="@style/Base.TextAppearance.AppCompat.Widget.PopupMenu.Small"
+                    android:layout_column="0" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+
+                <TextView
+                    android:id="@+id/populationlabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/populationlabel"
+                    android:layout_below="@+id/rank"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_span="6" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+
+                <TextView
+                    android:id="@+id/population"
+                    android:layout_width="320dp"
+                    android:layout_height="wrap_content"
+                    style="@style/Base.TextAppearance.Widget.AppCompat.Toolbar.Title"
+                    android:layout_alignBaseline="@+id/populationlabel"
+                    android:layout_alignBottom="@+id/populationlabel"
+                    android:layout_toRightOf="@+id/populationlabel"
+                    android:layout_toEndOf="@+id/populationlabel"
+                    android:layout_column="0" />
+            </TableRow>
+
+        </TableLayout>
+    </ScrollView>
+
+
+</RelativeLayout>

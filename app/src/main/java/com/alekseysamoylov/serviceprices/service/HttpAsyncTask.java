@@ -1,7 +1,6 @@
 package com.alekseysamoylov.serviceprices.service;
 
 import android.os.AsyncTask;
-import android.widget.TextView;
 
 import com.alekseysamoylov.serviceprices.model.AsyncResponse;
 
@@ -28,7 +27,7 @@ public class HttpAsyncTask extends AsyncTask<String, String, String> {
     protected String doInBackground(String... params) {
         System.out.println("Hello run!!");
         try {
-            URL url = new URL("http://www.alekseysamoylov.com:8080/serviceiii/rest/workGroups");
+            URL url = new URL(params[0]);
             HttpURLConnection urlConnection = (HttpURLConnection) url.openConnection();
             System.out.println(urlConnection.getResponseCode());
             String test = "";

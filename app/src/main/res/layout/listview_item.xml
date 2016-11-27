@@ -1,0 +1,57 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:focusable="true"
+    android:background="#ffe0ffd0">
+
+    <TextView
+        android:id="@+id/ranklabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/ranklabel"
+        android:textColor="@color/primary_dark_material_dark"
+        android:layout_below="@+id/countrylabel"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="8dp" />
+
+    <TextView
+        android:id="@+id/rank"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/primary_dark_material_dark"
+        android:layout_alignTop="@+id/ranklabel"
+        android:layout_toRightOf="@+id/ranklabel"
+        android:layout_toEndOf="@+id/ranklabel" />
+
+    <TextView
+        android:id="@+id/countrylabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/countrylabel"
+        android:textColor="@color/primary_dark_material_dark"
+        android:layout_below="@+id/population"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textSize="@dimen/abc_action_bar_content_inset_material" />
+
+    <TextView
+        android:id="@+id/country"
+        android:layout_width="wrap_content"
+        android:layout_height="24dp"
+        android:textColor="@color/primary_dark_material_dark"
+        android:layout_alignTop="@+id/countrylabel"
+        android:layout_toRightOf="@+id/countrylabel"
+        android:layout_toEndOf="@+id/countrylabel"
+        android:textSize="@dimen/abc_dialog_padding_top_material" />
+
+    <TextView
+        android:id="@+id/population"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:textColor="@color/primary_dark_material_dark" />
+
+</RelativeLayout>
