@@ -1,11 +1,13 @@
 package com.alekseysamoylov.serviceprices;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.StrictMode;
 import android.support.v7.app.AppCompatActivity;
-import android.widget.TextView;
 import android.view.View;
+import android.widget.TextView;
 
+import com.alekseysamoylov.serviceprices.activities.WorkListActivity;
 import com.alekseysamoylov.serviceprices.model.AsyncResponse;
 import com.alekseysamoylov.serviceprices.service.HttpAsyncTask;
 
@@ -25,6 +27,16 @@ public class MainActivity extends AppCompatActivity implements AsyncResponse {
         workText = (TextView) findViewById(R.id.workText);
         asyncTask  = new HttpAsyncTask(this);
 
+    }
+
+    /**
+     * go to work
+     *
+     * @param view
+     */
+    public void goWorkList(View view) {
+        Intent workListIntent = new Intent(MainActivity.this, WorkListActivity.class);
+        startActivity(workListIntent);
     }
 
     public void getWorks(View view) throws IOException {
