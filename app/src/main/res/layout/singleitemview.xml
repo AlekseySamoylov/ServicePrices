@@ -21,10 +21,10 @@
                 android:layout_height="fill_parent">
 
                 <TextView
-                    android:id="@+id/countrylabel"
+                    android:id="@+id/workTitleLabel"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/countrylabel"
+                    android:text="@string/work_title_label"
                     android:layout_alignParentTop="true"
                     android:layout_alignParentLeft="true"
                     android:layout_alignParentStart="true"
@@ -38,13 +38,13 @@
                 android:layout_height="fill_parent">
 
                 <TextView
-                    android:id="@+id/country"
+                    android:id="@+id/workTitle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     style="@style/Base.TextAppearance.Widget.AppCompat.Toolbar.Title"
-                    android:layout_alignTop="@+id/countrylabel"
-                    android:layout_toRightOf="@+id/countrylabel"
-                    android:layout_toEndOf="@+id/countrylabel"
+                    android:layout_alignTop="@+id/workTitleLabel"
+                    android:layout_toRightOf="@+id/workTitleLabel"
+                    android:layout_toEndOf="@+id/workTitleLabel"
                     android:layout_column="0" />
             </TableRow>
 
@@ -53,11 +53,11 @@
                 android:layout_height="fill_parent">
 
                 <TextView
-                    android:id="@+id/ranklabel"
+                    android:id="@+id/workPriceLabel"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/ranklabel"
-                    android:layout_below="@+id/country"
+                    android:text="@string/work_price_label"
+                    android:layout_below="@+id/workTitle"
                     android:layout_alignParentLeft="true"
                     android:layout_alignParentStart="true" />
 
@@ -68,13 +68,13 @@
                 android:layout_height="fill_parent">
 
                 <TextView
-                    android:id="@+id/rank"
+                    android:id="@+id/workPrice"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignBaseline="@+id/ranklabel"
-                    android:layout_alignBottom="@+id/ranklabel"
-                    android:layout_toRightOf="@+id/ranklabel"
-                    android:layout_toEndOf="@+id/ranklabel"
+                    android:layout_alignBaseline="@+id/workPriceLabel"
+                    android:layout_alignBottom="@+id/workPriceLabel"
+                    android:layout_toRightOf="@+id/workPriceLabel"
+                    android:layout_toEndOf="@+id/workPriceLabel"
                     style="@style/Base.TextAppearance.AppCompat.Widget.PopupMenu.Small"
                     android:layout_column="0" />
             </TableRow>
@@ -84,11 +84,11 @@
                 android:layout_height="fill_parent">
 
                 <TextView
-                    android:id="@+id/populationlabel"
+                    android:id="@+id/workDetailsLabel"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/populationlabel"
-                    android:layout_below="@+id/rank"
+                    android:text="@string/work_details_label"
+                    android:layout_below="@+id/workPrice"
                     android:layout_alignParentLeft="true"
                     android:layout_alignParentStart="true"
                     android:layout_span="6" />
@@ -100,14 +100,14 @@
                 android:layout_height="fill_parent">
 
                 <TextView
-                    android:id="@+id/population"
+                    android:id="@+id/workDetails"
                     android:layout_width="320dp"
                     android:layout_height="wrap_content"
                     style="@style/Base.TextAppearance.Widget.AppCompat.Toolbar.Title"
-                    android:layout_alignBaseline="@+id/populationlabel"
-                    android:layout_alignBottom="@+id/populationlabel"
-                    android:layout_toRightOf="@+id/populationlabel"
-                    android:layout_toEndOf="@+id/populationlabel"
+                    android:layout_alignBaseline="@+id/workDetailsLabel"
+                    android:layout_alignBottom="@+id/workDetailsLabel"
+                    android:layout_toRightOf="@+id/workDetailsLabel"
+                    android:layout_toEndOf="@+id/workDetailsLabel"
                     android:layout_column="0" />
             </TableRow>
 

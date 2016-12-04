@@ -2,23 +2,17 @@ package com.alekseysamoylov.serviceprices.activities;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.StrictMode;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.widget.TextView;
 
 import com.alekseysamoylov.serviceprices.R;
-import com.alekseysamoylov.serviceprices.model.AsyncResponse;
-import com.alekseysamoylov.serviceprices.service.HttpAsyncTask;
-
-import java.io.IOException;
-
-import static com.alekseysamoylov.serviceprices.util.RestConstants.WORKS_BY_GROUP;
+import com.alekseysamoylov.serviceprices.activities.work.WorkListViewActivity;
+import com.alekseysamoylov.serviceprices.model.async.AsyncResponse;
+import com.alekseysamoylov.serviceprices.service.async.HttpAsyncTask;
 
 
 public class MainActivity extends AppCompatActivity implements AsyncResponse {
 
-    private TextView workText;
     HttpAsyncTask asyncTask;
 
     @Override
@@ -26,39 +20,41 @@ public class MainActivity extends AppCompatActivity implements AsyncResponse {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        workText = (TextView) findViewById(R.id.workText);
         asyncTask  = new HttpAsyncTask(this);
 
     }
 
-    /**
-     * go to work
-     *
-     * @param view
-     */
-    public void goWorkList(View view) {
-        Intent workListIntent = new Intent(MainActivity.this, WorkListActivity.class);
-        workListIntent.putExtra("groupId", 2L);
-        startActivity(workListIntent);
-    }
-
-    public void goTestList(View view) {
-        Intent workListIntent = new Intent(this, WorksActivity.class);
-        startActivity(workListIntent);
-    }
-
-    public void getWorks(View view) throws IOException {
-        StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
-
-        StrictMode.setThreadPolicy(policy);
-        Long groupId = Long.valueOf(view.getTag().toString());
-        asyncTask.execute(String.format(WORKS_BY_GROUP, groupId));
-        view.setVisibility(View.INVISIBLE);
-
+    //TODO: (asamoylov) Create Enum for it!!!
+    public void goWorkToList(View view) {
+        Intent workListIntent = new Intent(this, WorkListViewActivity.class);
+        switch (view.getId()) {
+            case R.id.engineButton:
+                workListIntent.putExtra("groupId", 1L);
+                startActivity(workListIntent);
+                break;
+            case R.id.suspensionButton:
+                workListIntent.putExtra("groupId", 2L);
+                startActivity(workListIntent);
+                break;
+            case R.id.electricButton:
+                workListIntent.putExtra("groupId", 3L);
+                startActivity(workListIntent);
+                break;
+            case R.id.tireButton:
+                workListIntent.putExtra("groupId", 4L);
+                startActivity(workListIntent);
+                break;
+            case R.id.diagnosticsButton:
+                workListIntent.putExtra("groupId", 5L);
+                startActivity(workListIntent);
+                break;
+            default:
+                workListIntent.putExtra("groupId", 6L);
+                startActivity(workListIntent);
+        }
     }
 
     @Override
     public void processFinish(String output) {
-        workText.setText(output);
     }
 }

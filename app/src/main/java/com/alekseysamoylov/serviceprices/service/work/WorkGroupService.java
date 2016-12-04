@@ -1,6 +1,6 @@
-package com.alekseysamoylov.serviceprices.service;
+package com.alekseysamoylov.serviceprices.service.work;
 
-import com.alekseysamoylov.serviceprices.model.WorkGroup;
+import com.alekseysamoylov.serviceprices.model.work.WorkGroup;
 
 import java.util.List;
 

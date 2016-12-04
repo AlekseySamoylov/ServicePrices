@@ -1,6 +1,6 @@
-package com.alekseysamoylov.serviceprices.service;
+package com.alekseysamoylov.serviceprices.service.work;
 
-import com.alekseysamoylov.serviceprices.model.Work;
+import com.alekseysamoylov.serviceprices.model.work.Work;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -17,8 +17,12 @@ import java.util.List;
 public class WorkServiceImpl implements WorkService {
     @Override
     public List<Work> parseJsonToWorkList(String jsonData) {
-        System.out.println("hi " + jsonData);
         List<Work> workList = new ArrayList<>();
+        if (jsonData == null) {
+            Work work = new Work.Builder().title("No internet connection").build();
+            workList.add(work);
+            return workList;
+        }
         try {
             JSONArray jsonArray = new JSONArray(jsonData);
             for (int i = 0; i < jsonArray.length(); i++) {

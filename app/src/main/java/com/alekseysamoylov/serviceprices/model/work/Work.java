@@ -1,4 +1,4 @@
-package com.alekseysamoylov.serviceprices.model;
+package com.alekseysamoylov.serviceprices.model.work;
 
 import java.math.BigDecimal;
 

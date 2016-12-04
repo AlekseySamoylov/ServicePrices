@@ -1,8 +1,10 @@
-package com.alekseysamoylov.serviceprices.service;
+package com.alekseysamoylov.serviceprices.service.async;
 
 import android.os.AsyncTask;
 
-import com.alekseysamoylov.serviceprices.model.AsyncResponse;
+import com.alekseysamoylov.serviceprices.model.async.AsyncResponse;
+import com.alekseysamoylov.serviceprices.service.work.WorkGroupService;
+import com.alekseysamoylov.serviceprices.service.work.WorkGroupServiceImpl;
 
 import java.io.BufferedInputStream;
 import java.io.BufferedReader;

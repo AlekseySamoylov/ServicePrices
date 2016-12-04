@@ -1,4 +1,4 @@
-package com.alekseysamoylov.serviceprices.model;
+package com.alekseysamoylov.serviceprices.model.work;
 
 /**
  * Created by alekseysamoylov on 11/26/16.

@@ -5,48 +5,48 @@
     android:background="#ffe0ffd0">
 
     <TextView
-        android:id="@+id/ranklabel"
+        android:id="@+id/workPriceLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/ranklabel"
+        android:text="@string/work_price_label"
         android:textColor="@color/primary_dark_material_dark"
-        android:layout_below="@+id/countrylabel"
+        android:layout_below="@+id/workTitleLabel"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_marginTop="8dp" />
 
     <TextView
-        android:id="@+id/rank"
+        android:id="@+id/workPrice"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textColor="@color/primary_dark_material_dark"
-        android:layout_alignTop="@+id/ranklabel"
-        android:layout_toRightOf="@+id/ranklabel"
-        android:layout_toEndOf="@+id/ranklabel" />
+        android:layout_alignTop="@+id/workPriceLabel"
+        android:layout_toRightOf="@+id/workPriceLabel"
+        android:layout_toEndOf="@+id/workPriceLabel" />
 
     <TextView
-        android:id="@+id/countrylabel"
+        android:id="@+id/workTitleLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/countrylabel"
+        android:text="@string/work_title_label"
         android:textColor="@color/primary_dark_material_dark"
-        android:layout_below="@+id/population"
+        android:layout_below="@+id/workDetails"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:textSize="@dimen/abc_action_bar_content_inset_material" />
 
     <TextView
-        android:id="@+id/country"
+        android:id="@+id/workTitle"
         android:layout_width="wrap_content"
         android:layout_height="24dp"
         android:textColor="@color/primary_dark_material_dark"
-        android:layout_alignTop="@+id/countrylabel"
-        android:layout_toRightOf="@+id/countrylabel"
-        android:layout_toEndOf="@+id/countrylabel"
+        android:layout_alignTop="@+id/workTitleLabel"
+        android:layout_toRightOf="@+id/workTitleLabel"
+        android:layout_toEndOf="@+id/workTitleLabel"
         android:textSize="@dimen/abc_dialog_padding_top_material" />
 
     <TextView
-        android:id="@+id/population"
+        android:id="@+id/workDetails"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
