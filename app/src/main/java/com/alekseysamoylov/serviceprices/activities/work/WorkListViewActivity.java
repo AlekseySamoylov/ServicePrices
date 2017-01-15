@@ -19,7 +19,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
 
-import static com.alekseysamoylov.serviceprices.util.RestConstants.WORKS_BY_GROUP;
+import static com.alekseysamoylov.serviceprices.util.RestConstants.WORKS_BY_GROUP_URL;
 
 /**
  * Activity for Works list view
@@ -80,7 +80,7 @@ public class WorkListViewActivity extends Activity implements AsyncResponse {
         Bundle bundle = getIntent().getExtras();
         Long groupId = bundle.getLong("groupId");
         System.out.println("hello id " + groupId);
-        httpAsyncTask.execute(String.format(WORKS_BY_GROUP, groupId));
+        httpAsyncTask.execute(String.format(WORKS_BY_GROUP_URL, groupId));
     }
 
     @Override

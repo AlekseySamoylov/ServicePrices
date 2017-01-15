@@ -27,6 +27,18 @@
             android:name=".activities.work.SingleItemView"
             android:configChanges="orientation"
             android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.security.LoginActivity"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.security.RegistrationActivity"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.bonus.BonusActivity"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait" />
     </application>
 
 
