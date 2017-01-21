@@ -116,6 +116,8 @@ public class TestLoginActivity extends Activity {
 
             @Override
             public void onResponse(String response) {
+
+                System.out.println("Hello response " + response.toString());
                 Log.d(TAG, "Login Response: " + response.toString());
                 hideDialog();
 
