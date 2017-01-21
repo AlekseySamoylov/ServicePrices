@@ -10,6 +10,7 @@ import com.alekseysamoylov.serviceprices.R;
 import com.alekseysamoylov.serviceprices.activities.bonus.BonusActivity;
 import com.alekseysamoylov.serviceprices.activities.security.LoginActivity;
 import com.alekseysamoylov.serviceprices.activities.security.RegistrationActivity;
+import com.alekseysamoylov.serviceprices.activities.security.TestLoginActivity;
 import com.alekseysamoylov.serviceprices.activities.work.WorkListViewActivity;
 import com.alekseysamoylov.serviceprices.model.async.AsyncResponse;
 import com.alekseysamoylov.serviceprices.service.async.HttpAsyncTask;
@@ -53,7 +54,8 @@ public class MainActivity extends AppCompatActivity implements AsyncResponse {
     }
 
     public void goToSecurity(View view) {
-        Intent loginIntent = new Intent(this, LoginActivity.class);
+        Intent loginIntent = new Intent(this, TestLoginActivity.class);
+//        Intent loginIntent = new Intent(this, LoginActivity.class);
         Intent registrationIntent = new Intent(this, RegistrationActivity.class);
         switch (view.getId()) {
             case R.id.login:

@@ -33,6 +33,10 @@
             android:configChanges="orientation"
             android:screenOrientation="portrait" />
         <activity
+            android:name=".activities.security.TestLoginActivity"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait" />
+        <activity
             android:name=".activities.security.RegistrationActivity"
             android:configChanges="orientation"
             android:screenOrientation="portrait" />
