@@ -7,7 +7,9 @@ package com.alekseysamoylov.serviceprices.util;
 public class RestConstants {
     public static final String WORKS_URL = "";
     public static final String WORK_GROUPS_URL = "http://www.alekseysamoylov.com/serviceiii/rest/workGroups";
-    public static final String WORKS_BY_GROUP_URL = "http://www.alekseysamoylov.com/serviceiii/rest/worksByGroupId/%d";
-    public static final String LOGIN_URL = "https://www.alekseysamoylov.com/serviceiii/login";
+    //public static final String WORKS_BY_GROUP_URL = "http://www.alekseysamoylov.com/serviceiii/rest/worksByGroupId/%d";
+    public static final String WORKS_BY_GROUP_URL = "http://192.168.0.108:18090/rest/worksByGroupId/%d";
+    //public static final String LOGIN_URL = "https://www.alekseysamoylov.com/serviceiii/rest/login";
+    public static final String LOGIN_URL = "http://192.168.0.108:18090/rest/androidLogin";
 
 }
